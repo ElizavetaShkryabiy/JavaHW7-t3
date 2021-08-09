@@ -50,20 +50,23 @@
                     <failsOnError>true</failsOnError>
                     <linkXRef>false</linkXRef>
                 </configuration>
-                <!--                <reportSets>-->
-                <!--                    <reportSet>-->
-                <!--                        <reports>-->
-                <!--                            <report>checkstyle</report>-->
-                <!--                        </reports>-->
-                <!--                    </reportSet>-->
-                <!--                </reportSets>-->
                 <executions>
                     <execution>
-                        <id>prepare-agent1232</id>
-                        <phase>initialize</phase>
+                        <id>validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+<!--                        <reportSets>-->
+<!--                            <reportSet>-->
+<!--                                <reports>-->
+<!--                                    <report>checkstyle</report>-->
+<!--                                </reports>-->
+<!--                            </reportSet>-->
+<!--                        </reportSets>-->
                     </execution>
                     <execution>
-                        <id>report1232</id>
+                        <id>verify</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
@@ -71,22 +74,6 @@
                     </execution>
                 </executions>
 
-                <!--                <executions>-->
-                <!--                    <execution>-->
-                <!--                        <id>validate</id>-->
-                <!--                        <phase>validate</phase>-->
-                <!--                        <goals>-->
-                <!--                            <goal>check</goal>-->
-                <!--                        </goals>-->
-                <!--                    </execution>-->
-                <!--                    <execution>-->
-                <!--                        <id>verify</id>-->
-                <!--                        <phase>verify</phase>-->
-                <!--                        <goals>-->
-                <!--                            <goal>check</goal>-->
-                <!--                        </goals>-->
-                <!--                    </execution>-->
-                <!--                </executions>-->
 
             </plugin>
 
